@@ -7,7 +7,7 @@ on:
 jobs:
   build:
 
-    runs-on: KdServer
+    runs-on: self-hosted
 
     steps:
     - name: Compiling Mod
