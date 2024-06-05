@@ -1,0 +1,17 @@
+name: Compiling
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Compiling Mod
+      # You may pin to the exact commit or the version.
+      # uses: RuochenFu21/compilation@6bb9ada03c2d3c12f45ed3eb2cf1d70d60cf0814
+      uses: RuochenFu21/compilation@v1
+          
