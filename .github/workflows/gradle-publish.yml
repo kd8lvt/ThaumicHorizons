@@ -5,9 +5,9 @@ name: Build and test
 
 on:
   pull_request:
-    branches: [ master, main ]
+    branches: [ master, main, build ]
   push:
-    branches: [ master, main ]
+    branches: [ master, main, build ]
   workflow_call:
     inputs:
       timeout:
