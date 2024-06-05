@@ -92,16 +92,18 @@ public class PocketPlaneData {
             final BiomeGenBase bio = setBiome(xCenter, yCenter, zCenter, data, world, aspects);
             final int noise = fastFloor(calcNoise(aspects));
             final int life = fastFloor(calcLife(aspects));
-            drawLayers(xCenter, yCenter, zCenter, data, world, aspects, noise, bio, life);
-            drawCaves(xCenter, yCenter, zCenter, data, world, aspects, noise);
-            drawPockets(xCenter, yCenter, zCenter, data, world, aspects, noise);
-            drawRavines(xCenter, yCenter, zCenter, data, world, aspects, noise);
-            drawClouds(xCenter, yCenter, zCenter, data, world, aspects, noise);
-            drawSurfaceFeatures(xCenter, yCenter, zCenter, data, world, aspects, noise, life);
-            drawUndergroundFeatures(xCenter, yCenter, zCenter, data, world, aspects, noise, life);
-            drawLeviathanBones(xCenter, yCenter, zCenter, data, world, aspects, noise);
+            if (aspects.getAmount(Aspects.VOID) <= 0) { //Give me an empty pocket, damnit!
+                drawLayers(xCenter, yCenter, zCenter, data, world, aspects, noise, bio, life);
+                drawCaves(xCenter, yCenter, zCenter, data, world, aspects, noise);
+                drawPockets(xCenter, yCenter, zCenter, data, world, aspects, noise);
+                drawRavines(xCenter, yCenter, zCenter, data, world, aspects, noise);
+                drawClouds(xCenter, yCenter, zCenter, data, world, aspects, noise);
+                drawSurfaceFeatures(xCenter, yCenter, zCenter, data, world, aspects, noise, life);
+                drawUndergroundFeatures(xCenter, yCenter, zCenter, data, world, aspects, noise, life);
+                drawLeviathanBones(xCenter, yCenter, zCenter, data, world, aspects, noise);
+                drawRings(xCenter, yCenter, zCenter, data, world, aspects);
+            }
             addEffects(data, aspects);
-            drawRings(xCenter, yCenter, zCenter, data, world, aspects);
             drawSphere(xCenter, yCenter, zCenter, data.radius, ThaumicHorizons.blockVoid, 0, world);
             for (int x = -2; x <= 2; ++x) {
                 for (int z = -2; z <= 2; ++z) {
@@ -277,7 +279,7 @@ public class PocketPlaneData {
         final int total = aspects.visSize();
         int level = yCenter;
         boolean drewAnything = false;
-
+        
         if (aspects.getAmount(Aspect.COLD) > 0) {
             drawLayer(xCenter, yCenter, zCenter, data, world, Blocks.packed_ice, 0, level, 0, null, 0, aspects);
             level -= fastFloor((aspectFraction(Aspect.COLD, aspects) * data.radius));
