@@ -92,7 +92,7 @@ public class PocketPlaneData {
             final BiomeGenBase bio = setBiome(xCenter, yCenter, zCenter, data, world, aspects);
             final int noise = fastFloor(calcNoise(aspects));
             final int life = fastFloor(calcLife(aspects));
-            if (aspects.getAmount(Aspect.VOID) <= 0) { //Give me an empty pocket, damnit!
+            if (aspects.getAmount(Aspect.VOID) <= 0) { // Give me an empty pocket, damnit!
                 drawLayers(xCenter, yCenter, zCenter, data, world, aspects, noise, bio, life);
                 drawCaves(xCenter, yCenter, zCenter, data, world, aspects, noise);
                 drawPockets(xCenter, yCenter, zCenter, data, world, aspects, noise);
@@ -279,7 +279,7 @@ public class PocketPlaneData {
         final int total = aspects.visSize();
         int level = yCenter;
         boolean drewAnything = false;
-        
+
         if (aspects.getAmount(Aspect.COLD) > 0) {
             drawLayer(xCenter, yCenter, zCenter, data, world, Blocks.packed_ice, 0, level, 0, null, 0, aspects);
             level -= fastFloor((aspectFraction(Aspect.COLD, aspects) * data.radius));

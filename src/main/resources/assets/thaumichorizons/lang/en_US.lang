@@ -163,6 +163,7 @@ item.meatTH.name=Unidentifiable Meat
 item.meatcookedTH.name=Unidentifiable Cooked Meat
 item.meatnuggetTH.name=Unidentifiable Meat Nugget
 item.nodeCheat.name=Node Opener
+item.auralFigment.name=Aural Figment
 
 ###BLOCKS###
 
@@ -226,6 +227,7 @@ tile.ThaumicHorizons_crystal.15.name=Black Crystal
 tile.ThaumicHorizons_deepcrystal.name=Deep Crystal
 tile.ThaumicHorizons_leviathan.name=Primordial Fossil
 tile.ThaumicHorizons_gateway.name=Planar Gateway
+tile.ThaumicHorizons_nodeInfuser.name=Node Infuser
 
 ###RESEARCH###
 
@@ -537,6 +539,15 @@ tc.research_name.leviathan=Primordial Fossils
 tc.research_text.leviathan=With strange eons death may die
 leviathan1=What a strange, grim discovery. It appears that the void was not quite as empty as you expected - your pocket plane swallowed up the fossilized remains of an unknown entity as it formed.<BR>At the moment you can only guess at the nature of this ancient leviathan. The few bones captured by your plane do not give many clues to its overall anatomy, but their magical properties are astounding. Even in death they pulse with activity, transmuting aspects in ways which violate almost every known thaumaturgical law.
 leviathan2=Stranger still, you can't shake the feeling that these fossils are watching you. Each time you have tried to harness their unique powers in some thaumaturgical device, the primordial bones have shifted their behavior in just the right way to render it useless.<BR>Perhaps they are not quite as dead as they appear, and in fact harbor a metabolism radically different from those of terrestrial creatures... which raises the possibility of their awakening.<BR>You will have to keep a careful eye on the fossils, and any devices you may one day craft from them.
+tc.research_name.auralFigment=Aural Figment
+tc.research_text.auralFigment=What could go wrong?
+auralFigment1=Having seen the inside of an aura node with your own eyes, you've had an epiphany.<BR>Something no other Thaumaturge has succeeded in doing - directly modifying an Aura Node - is within your reach. All you have to do is put the pieces together. In a cruel twist of fate, the last piece of the puzzle was right underneath every Thaumaturge's nose.
+auralFigment2=A jarred aura node infused with a primordial pearl, a few shards, a planar conduit, and copious amounts of essentia results in one of the least stable things you've ever managed to create - an Aural Figment.<BR>Surely packing so much magical energy into such a fragile package couldn't possibly go wrong!
+tc.research_name.nodeInfuser=Node Infusion
+tc.research_text.nodeInfuser=Wait - that's illegal.
+nodeInfuser1=At last - the power to directly manipulate aura nodes is in your hands. All it took was a quick trip to steal a Pearl from the Eldritch Guardians and traveling to the source of all magic to get it done. When placed directly atop a Node, the Node Infuser does something very similar to Node Bullying - but with a lot more force. It masquerades as an Aura Node, with but a single vis, a single aspect.<BR><BR>The instant the targeted Node makes the magical link to bully its prey, the Node Infuser hijacks the connection and forces open the Node's dimensional breach.
+nodeInfuser2=Unlike previous attempts to hijack Node Bullying, the Aura Node at the core of the Aural Figment stabilizes the interaction in such a way as to allow near-full control. As such, any essentia pumped into the top of the Node Infuser can be directly added to the Node's capacity. The more complex an aspect is, the more Essentia it takes to tune the breach. It takes exactly as much essentia as the aspect has primal aspects in its construction.<BR>For example, Ordo is already primal, so it is added at a 1:1 ratio.<BR>Fabrico, being made of 5 Ordo, 2 Ignis, 6 Terra, 6 Aqua, 2 Perditio, and 2 Aer, requires a total of 21 Fabrico essentia to add 1 Fabrico aspect.
+nodeInfuser3=However, there are some limits to the process. As the connection made during Node Bullying is one-way, you cannot §oremove§0 aspects from a Node.<BR>Further, after the imbalance of aspects reaches a certain point (roughly three-quarters of the total aspect mix) the Node stops responding to any more of a particular Essentia - and as the imbalance grows, there is a chance that the Infuser will fail to properly tune the breach, wasting essentia.<BR>Finally, this places great strain on the Node being infused. Any node placed beneath the Node Infuser is at risk of gradual destabilization. Luckily, stabilizing the Node is a surefire way to prevent the node from being §ocompletely§0 destroyed.
 test1=this is a test.
 tc.research_name.test1=This is a test.
 tc.research_name.alternateGolemBell=Golemancer's Bell

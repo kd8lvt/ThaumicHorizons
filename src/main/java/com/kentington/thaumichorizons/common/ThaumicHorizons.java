@@ -58,48 +58,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.kentington.thaumichorizons.client.lib.RenderEventHandler;
-import com.kentington.thaumichorizons.common.blocks.BlockAlchemite;
-import com.kentington.thaumichorizons.common.blocks.BlockBloodInfuser;
-import com.kentington.thaumichorizons.common.blocks.BlockBone;
-import com.kentington.thaumichorizons.common.blocks.BlockBrain;
-import com.kentington.thaumichorizons.common.blocks.BlockChocolate;
-import com.kentington.thaumichorizons.common.blocks.BlockCloud;
-import com.kentington.thaumichorizons.common.blocks.BlockCloudItem;
-import com.kentington.thaumichorizons.common.blocks.BlockCrystal;
-import com.kentington.thaumichorizons.common.blocks.BlockCrystalDeep;
-import com.kentington.thaumichorizons.common.blocks.BlockCrystalItem;
-import com.kentington.thaumichorizons.common.blocks.BlockDust;
-import com.kentington.thaumichorizons.common.blocks.BlockEssentiaDynamo;
-import com.kentington.thaumichorizons.common.blocks.BlockEvanescent;
-import com.kentington.thaumichorizons.common.blocks.BlockEyes;
-import com.kentington.thaumichorizons.common.blocks.BlockFlesh;
-import com.kentington.thaumichorizons.common.blocks.BlockGatewayPortal;
-import com.kentington.thaumichorizons.common.blocks.BlockInspiratron;
-import com.kentington.thaumichorizons.common.blocks.BlockLeviathan;
-import com.kentington.thaumichorizons.common.blocks.BlockLight;
-import com.kentington.thaumichorizons.common.blocks.BlockLightSolar;
-import com.kentington.thaumichorizons.common.blocks.BlockModifiedMatrix;
-import com.kentington.thaumichorizons.common.blocks.BlockNodeMonitor;
-import com.kentington.thaumichorizons.common.blocks.BlockPortalTH;
-import com.kentington.thaumichorizons.common.blocks.BlockRecombinator;
-import com.kentington.thaumichorizons.common.blocks.BlockSlot;
-import com.kentington.thaumichorizons.common.blocks.BlockSoulBeacon;
-import com.kentington.thaumichorizons.common.blocks.BlockSoulExtractor;
-import com.kentington.thaumichorizons.common.blocks.BlockSoulJar;
-import com.kentington.thaumichorizons.common.blocks.BlockSoulJarItem;
-import com.kentington.thaumichorizons.common.blocks.BlockSoulforge;
-import com.kentington.thaumichorizons.common.blocks.BlockSpike;
-import com.kentington.thaumichorizons.common.blocks.BlockSyntheticNode;
-import com.kentington.thaumichorizons.common.blocks.BlockTransductionAmplifier;
-import com.kentington.thaumichorizons.common.blocks.BlockVat;
-import com.kentington.thaumichorizons.common.blocks.BlockVatInterior;
-import com.kentington.thaumichorizons.common.blocks.BlockVatSolid;
-import com.kentington.thaumichorizons.common.blocks.BlockVisDynamo;
-import com.kentington.thaumichorizons.common.blocks.BlockVoid;
-import com.kentington.thaumichorizons.common.blocks.BlockVortex;
-import com.kentington.thaumichorizons.common.blocks.BlockVortexItem;
-import com.kentington.thaumichorizons.common.blocks.BlockVortexStabilizer;
-import com.kentington.thaumichorizons.common.blocks.MaterialPortalTH;
+import com.kentington.thaumichorizons.common.blocks.*;
 import com.kentington.thaumichorizons.common.entities.EntityAlchemitePrimed;
 import com.kentington.thaumichorizons.common.entities.EntityBlastPhial;
 import com.kentington.thaumichorizons.common.entities.EntityBoatGreatwood;
@@ -132,44 +91,7 @@ import com.kentington.thaumichorizons.common.entities.EntitySyringe;
 import com.kentington.thaumichorizons.common.entities.EntityTaintPig;
 import com.kentington.thaumichorizons.common.entities.EntityVoltSlime;
 import com.kentington.thaumichorizons.common.entities.ItemSpawnerEgg;
-import com.kentington.thaumichorizons.common.items.ItemAmuletMirror;
-import com.kentington.thaumichorizons.common.items.ItemBarChocolate;
-import com.kentington.thaumichorizons.common.items.ItemBoatGreatwood;
-import com.kentington.thaumichorizons.common.items.ItemBoatThaumium;
-import com.kentington.thaumichorizons.common.items.ItemBucketChocolate;
-import com.kentington.thaumichorizons.common.items.ItemCorpseEffigy;
-import com.kentington.thaumichorizons.common.items.ItemCrystalWand;
-import com.kentington.thaumichorizons.common.items.ItemDummy;
-import com.kentington.thaumichorizons.common.items.ItemDummyVat;
-import com.kentington.thaumichorizons.common.items.ItemEggIncubated;
-import com.kentington.thaumichorizons.common.items.ItemFocusAnimation;
-import com.kentington.thaumichorizons.common.items.ItemFocusContainment;
-import com.kentington.thaumichorizons.common.items.ItemFocusDisintegration;
-import com.kentington.thaumichorizons.common.items.ItemFocusIllumination;
-import com.kentington.thaumichorizons.common.items.ItemFocusLiquefaction;
-import com.kentington.thaumichorizons.common.items.ItemGoldEgg;
-import com.kentington.thaumichorizons.common.items.ItemGolemBellTH;
-import com.kentington.thaumichorizons.common.items.ItemGolemPlacer;
-import com.kentington.thaumichorizons.common.items.ItemGolemPowder;
-import com.kentington.thaumichorizons.common.items.ItemIceCream;
-import com.kentington.thaumichorizons.common.items.ItemInfusionCheat;
-import com.kentington.thaumichorizons.common.items.ItemInfusionSelfCheat;
-import com.kentington.thaumichorizons.common.items.ItemInjector;
-import com.kentington.thaumichorizons.common.items.ItemInkEgg;
-import com.kentington.thaumichorizons.common.items.ItemKeystone;
-import com.kentington.thaumichorizons.common.items.ItemMeat;
-import com.kentington.thaumichorizons.common.items.ItemMeatCooked;
-import com.kentington.thaumichorizons.common.items.ItemMeatNugget;
-import com.kentington.thaumichorizons.common.items.ItemNodeCheat;
-import com.kentington.thaumichorizons.common.items.ItemNutrients;
-import com.kentington.thaumichorizons.common.items.ItemPlanarConduit;
-import com.kentington.thaumichorizons.common.items.ItemSuicidePill;
-import com.kentington.thaumichorizons.common.items.ItemSyringeBlood;
-import com.kentington.thaumichorizons.common.items.ItemSyringeBloodSample;
-import com.kentington.thaumichorizons.common.items.ItemSyringeEmpty;
-import com.kentington.thaumichorizons.common.items.ItemSyringeInjection;
-import com.kentington.thaumichorizons.common.items.ItemVoidPutty;
-import com.kentington.thaumichorizons.common.items.ItemWandCastingDisposable;
+import com.kentington.thaumichorizons.common.items.*;
 import com.kentington.thaumichorizons.common.items.crafting.RecipeVoidPuttyRepair;
 import com.kentington.thaumichorizons.common.items.crafting.RecipesFocusIlluminationDyes;
 import com.kentington.thaumichorizons.common.items.lenses.ItemLensAir;
@@ -191,28 +113,7 @@ import com.kentington.thaumichorizons.common.lib.potion.PotionSynthesis;
 import com.kentington.thaumichorizons.common.lib.potion.PotionVacuum;
 import com.kentington.thaumichorizons.common.lib.potion.PotionVisBoost;
 import com.kentington.thaumichorizons.common.lib.potion.PotionVisRegen;
-import com.kentington.thaumichorizons.common.tiles.TileBloodInfuser;
-import com.kentington.thaumichorizons.common.tiles.TileCloud;
-import com.kentington.thaumichorizons.common.tiles.TileEssentiaDynamo;
-import com.kentington.thaumichorizons.common.tiles.TileInspiratron;
-import com.kentington.thaumichorizons.common.tiles.TileLight;
-import com.kentington.thaumichorizons.common.tiles.TileNodeMonitor;
-import com.kentington.thaumichorizons.common.tiles.TileRecombinator;
-import com.kentington.thaumichorizons.common.tiles.TileSlot;
-import com.kentington.thaumichorizons.common.tiles.TileSoulBeacon;
-import com.kentington.thaumichorizons.common.tiles.TileSoulExtractor;
-import com.kentington.thaumichorizons.common.tiles.TileSoulJar;
-import com.kentington.thaumichorizons.common.tiles.TileSoulforge;
-import com.kentington.thaumichorizons.common.tiles.TileSpike;
-import com.kentington.thaumichorizons.common.tiles.TileSyntheticNode;
-import com.kentington.thaumichorizons.common.tiles.TileTransductionAmplifier;
-import com.kentington.thaumichorizons.common.tiles.TileVat;
-import com.kentington.thaumichorizons.common.tiles.TileVatConnector;
-import com.kentington.thaumichorizons.common.tiles.TileVatMatrix;
-import com.kentington.thaumichorizons.common.tiles.TileVatSlave;
-import com.kentington.thaumichorizons.common.tiles.TileVisDynamo;
-import com.kentington.thaumichorizons.common.tiles.TileVortex;
-import com.kentington.thaumichorizons.common.tiles.TileVortexStabilizer;
+import com.kentington.thaumichorizons.common.tiles.*;
 
 import cpw.mods.fml.client.event.ConfigChangedEvent.OnConfigChangedEvent;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -297,6 +198,7 @@ public class ThaumicHorizons {
     public static int blockTransducerRI = -1;
     public static int blockRecombinatorRI = -1;
     public static int blockVortexStabilizerRI = -1;
+    public static int blockNodeInfuserRI = -1;
     public static int blockVortexRI = -1;
     public static int blockSpikeRI = -1;
     public static int blockSlotRI = -1;
@@ -351,6 +253,7 @@ public class ThaumicHorizons {
     public static Item itemMeatCooked;
     public static Item itemMeatNugget;
     public static Item itemNodeCheat;
+    public static Item itemAuralFigment;
     public static Block blockSynthNode;
     public static Block blockAlchemite;
     public static Block blockVisDynamo;
@@ -391,6 +294,7 @@ public class ThaumicHorizons {
     public static Block blockSlot;
     public static Block blockPortal;
     public static Block blockGateway;
+    public static Block blockNodeInfuser;
     public static final Material portal;
     public static ShapedArcaneRecipe recipeSyringe;
     public static ShapedArcaneRecipe recipeLensCase;
@@ -453,6 +357,8 @@ public class ThaumicHorizons {
     public static InfusionRecipe recipeVortexStabilizer;
     public static InfusionRecipe recipeRecombinator;
     public static InfusionRecipe recipeSlot;
+    public static InfusionRecipe recipeAuralFigment;
+    public static InfusionRecipe recipeNodeInfuser;
     public static WandRod ROD_CRYSTAL;
     public static WandCap CAP_CRYSTAL;
     public static CreativeTabs tabTH;
@@ -537,6 +443,7 @@ public class ThaumicHorizons {
         blockSlot = new BlockSlot();
         blockPortal = new BlockPortalTH();
         blockGateway = new BlockGatewayPortal();
+        blockNodeInfuser = new BlockNodeInfuser(Material.rock);
         itemSpawnerEgg = new ItemSpawnerEgg();
         itemEggIncubated = new ItemEggIncubated();
         itemLensCase = new ItemLensCase();
@@ -583,6 +490,7 @@ public class ThaumicHorizons {
         itemMeatCooked = new ItemMeatCooked();
         itemMeatNugget = new ItemMeatNugget();
         itemNodeCheat = new ItemNodeCheat();
+        itemAuralFigment = new ItemAuralFigment();
         GameRegistry.registerBlock(blockSynthNode, "synthNode");
         GameRegistry.registerBlock(blockAlchemite, "alchemite");
         GameRegistry.registerBlock(blockVisDynamo, "visDynamo");
@@ -623,6 +531,7 @@ public class ThaumicHorizons {
         GameRegistry.registerBlock(blockSlot, "slotTH");
         GameRegistry.registerBlock(blockPortal, "portalTH");
         GameRegistry.registerBlock(blockGateway, "gatewayTH");
+        GameRegistry.registerBlock(blockNodeInfuser, "nodeInfuserTH");
         GameRegistry.registerItem(itemSpawnerEgg, "spawnerEgg");
         GameRegistry.registerItem(itemEggIncubated, "eggIncubated");
         GameRegistry.registerItem(itemLensFire, "lensFire");
@@ -672,6 +581,7 @@ public class ThaumicHorizons {
         GameRegistry.registerItem(itemMeatCooked, "meatCookedTH");
         GameRegistry.registerItem(itemMeatNugget, "meatNuggetTH");
         GameRegistry.registerItem(itemNodeCheat, "nodeCheat");
+        GameRegistry.registerItem(itemAuralFigment, "auralFigment");
         EntityRegistry.registerModEntity(EntityAlchemitePrimed.class, "PrimedAlchemite", 0, this, 64, 20, false);
         EntityRegistry.registerModEntity(EntityEggIncubated.class, "Egg", 1, this, 64, 20, true);
         EntityRegistry.registerModEntity(EntityChromaticSheep.class, "ChromaticSheep", 2, this, 64, 3, true);
@@ -728,6 +638,7 @@ public class ThaumicHorizons {
         EntityRegistry
                 .registerModEntity(EntityLightningBoltFinite.class, "LightningBoltFinite", 31, this, 64, 20, false);
         GameRegistry.registerTileEntity(TileSyntheticNode.class, "TileSynthNode");
+        GameRegistry.registerTileEntity(TileNodeInfuser.class, "TileNodeInfuser");
         GameRegistry.registerTileEntity(TileVisDynamo.class, "TileVisDynamo");
         GameRegistry.registerTileEntity(TileEssentiaDynamo.class, "TileEssentiaDynamoTH");
         GameRegistry.registerTileEntity(TileNodeMonitor.class, "TileNodeMonitor");
@@ -2246,7 +2157,68 @@ public class ThaumicHorizons {
             infusion9.setParents("pocketPlane");
             infusion9.setConcealed();
             ResearchCategories.addResearch(infusion9);
+            ResearchItem auralFigment = new ResearchItem(
+                    "auralFigment",
+                    "ThaumicHorizons",
+                    (new AspectList()).add(Aspect.AURA, 1).add(Aspect.ORDER, 1).add(Aspect.AIR, 1)
+                            .add(Aspect.ENTROPY, 1).add(Aspect.FIRE, 1).add(Aspect.EARTH, 1).add(Aspect.WATER, 1)
+                            .add(Aspect.VOID, 1).add(Aspect.ELDRITCH, 1),
+                    20,
+                    13,
+                    5,
+                    new ItemStack(itemAuralFigment, 1, 0));
+            auralFigment.setConcealed();
+            ResearchPage auralFigment1 = new ResearchPage("auralFigment1");
+            ResearchPage auralFigment2 = new ResearchPage("auralFigment2");
+            ItemStack dummyStack1 = new ItemStack(itemAuralFigment, 1, 0);
+            ItemStack dummyInputStack1 = new ItemStack(ConfigItems.itemJarNode, 1);
+            recipeAuralFigment = ThaumcraftApi.addInfusionCraftingRecipe(
+                    "auralFigment",
+                    dummyStack1,
+                    15,
+                    (new AspectList()).add(Aspect.AURA, 128).add(Aspect.AIR, 128).add(Aspect.ORDER, 128)
+                            .add(Aspect.ENTROPY, 128).add(Aspect.EARTH, 128).add(Aspect.WATER, 128)
+                            .add(Aspect.FIRE, 128),
+                    dummyInputStack1,
+                    new ItemStack[] { new ItemStack(ConfigItems.itemShard, 1, 0),
+                            new ItemStack(ConfigItems.itemShard, 1, 1), new ItemStack(ConfigItems.itemShard, 1, 2),
+                            new ItemStack(ConfigItems.itemEldritchObject, 1, 3),
+                            new ItemStack(ConfigItems.itemShard, 1, 3), new ItemStack(ConfigItems.itemShard, 1, 4),
+                            new ItemStack(ConfigItems.itemShard, 1, 5), new ItemStack(itemPlanarConduit, 1, 0) });
+            ResearchPage auralFigment3 = new ResearchPage(recipeAuralFigment);
+            auralFigment.setParents("pocketPlane");
+            auralFigment.setAutoUnlock();
+            auralFigment.setPages(auralFigment1, auralFigment2, auralFigment3);
+            ResearchCategories.addResearch(auralFigment);
+
+            ResearchItem nodeInfuser = new ResearchItem(
+                    "nodeInfuser",
+                    "ThaumicHorizons",
+                    (new AspectList()).add(Aspect.AURA, 1).add(Aspect.ELDRITCH, 1),
+                    20,
+                    14,
+                    1,
+                    new ItemStack(blockNodeInfuser));
+            ResearchPage nodeInfuser1 = new ResearchPage("nodeInfuser1");
+            ResearchPage nodeInfuser2 = new ResearchPage("nodeInfuser2");
+            ResearchPage nodeInfuser3 = new ResearchPage("nodeInfuser3");
+            recipeNodeInfuser = ThaumcraftApi.addInfusionCraftingRecipe(
+                    "nodeInfuser",
+                    new ItemStack(blockNodeInfuser, 1, 0),
+                    15,
+                    (new AspectList()).add(Aspect.AURA, 32).add(Aspect.ELDRITCH, 32).add(Aspect.MAGIC, 64)
+                            .add(Aspect.TOOL, 64),
+                    new ItemStack(blockVortexStabilizer, 1, 0),
+                    new ItemStack[] { new ItemStack(itemPlanarConduit, 1, 0), new ItemStack(itemAuralFigment, 1, 0),
+                            new ItemStack(itemPlanarConduit, 1, 0), new ItemStack(blockSynthNode) });
+            ResearchPage nodeInfuser4 = new ResearchPage(recipeNodeInfuser);
+            nodeInfuser.setParents("auralFigment");
+            nodeInfuser.setConcealed();
+            nodeInfuser.setItemTriggers(new ItemStack(itemAuralFigment, 1, 0));
+            nodeInfuser.setPages(nodeInfuser1, nodeInfuser2, nodeInfuser3, nodeInfuser4);
+            ResearchCategories.addResearch(nodeInfuser);
         }
+
         ResearchItem generalInfusion1 = new ResearchItem(
                 "generalInfusion",
                 "ThaumicHorizons",
